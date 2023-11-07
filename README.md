@@ -7,11 +7,9 @@ Welcome to the Rock, Paper, Scissors game! This is a simple implementation of th
 1. Click one of the buttons: Rock, Paper, or Scissors to make your choice.
 2. The game will display the winner for the current round and update the round counter.
 3. After 5 rounds, the final winner will be declared.
-4. A "Play Again" button will appear, allowing you to reset the game.
 
 ## Updates
 
-- Added a "Play Again" button.
 - Improved game logic and round tracking.
 - Disabled button functionality after 5 rounds.
 
