@@ -2,6 +2,14 @@
 
 Welcome to the Rock, Paper, Scissors game! This is a simple implementation of the classic game where you can compete against the computer in a battle of wits. The game is designed to be played in the browser console. This project serves as a starting point for learning JavaScript and web development.
 
+## Live Preview
+
+You can go ann play [here.](https://zoirethl.github.io/rock-paper-scissors-ui/)
+
+## Overview
+
+![gif](Nov-07-2023%2016-01-02.gif)
+
 ## How to Play
 
 1. Click one of the buttons: Rock, Paper, or Scissors to make your choice.
