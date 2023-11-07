@@ -3,6 +3,11 @@ console.log ("Hello world"); //Checking that my script is working xD
 //Computer will randomly choose between rock, paper, scissors
 //First let's randomize between 3 numbers:
 var result;
+var winner;
+var playerScore = 0;
+var computerScore = 0;
+var currentRound = 0;
+
 function getComputerChoice() 
 {
     const randomNum = Math.floor(Math.random() * 3); //random number between 0 & 2
@@ -15,21 +20,17 @@ function getComputerChoice()
         else {
             result = 'Scissors';
         }   
-        return;    
-       
 }
-getComputerChoice();
 
-var winner;
-function playRound(playerSelection, result) { //Comparing both choices to declare a winner
+function playRound(playerSelection, computerSelection) { //Comparing both choices to declare a winner
 
-   
     if (
     (playerSelection == 'Rock' && computerSelection == 'Paper') || 
     (playerSelection == 'Paper' && computerSelection == 'Scissors') || 
     (playerSelection == 'Scissors' && computerSelection == 'Rock')
     ){ //Compares both choices
         winner = 'You Lose!';
+        computerScore ++; 
     }
     else if ( 
     (playerSelection == 'Paper' && computerSelection == 'Rock') || 
@@ -37,18 +38,51 @@ function playRound(playerSelection, result) { //Comparing both choices to declar
     (playerSelection == 'Rock' && computerSelection == 'Scissors')
     ) {
         winner = 'You Win!';
+        playerScore++;
     }
     else {
         winner = "It's a Tie!";
     }
-    return;
-   
 }
-//Includes two parameters: playerSelection & computerSelection
-const playerSelection = "Paper";
-const computerSelection = result;
 
-getComputerChoice();
-playRound (playerSelection , computerSelection); //Initializing two functions
-console.log (playerSelection,computerSelection);
-console.log (winner);
+function displayResult (playerSelection) {
+    getComputerChoice();
+    playRound (playerSelection, result);
+
+    document.getElementById('round-winner').textContent = winner;
+    currentRound++;
+
+    document.getElementById ('current-round').textContent = currentRound;
+
+    if (currentRound === 5) {
+        //Determines who wins after playing all the rounds
+        if (playerScore > computerScore) {
+            document.getElementById('final-winner').textContent = 'You are the Champion!';
+        }else if (playerScore < computerScore) {
+                document.getElementById('final-winner').textContent = 'Computer Wins!';
+            } else {
+                document.getElementById('final-winner').textContent = "It's a Tie!";
+            }
+
+            //player won't be able to continue playing after 5 rounds
+            document.getElementById('rock').disabled = true;
+            document.getElementById('paper').disabled = true;
+            document.getElementById('scissors').disabled = true;
+        }
+    }
+    
+
+
+//Adding event listeners to buttons
+
+document.getElementById('rock').addEventListener('click', function () {
+    displayResult('Rock', result)
+})
+
+document.getElementById('paper').addEventListener('click', function () {
+    displayResult('Paper', result)
+})
+document.getElementById('scissors').addEventListener('click', function () {
+    displayResult('Scissors', result)
+})
+

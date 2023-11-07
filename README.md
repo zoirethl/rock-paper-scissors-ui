@@ -4,43 +4,22 @@ Welcome to the Rock, Paper, Scissors game! This is a simple implementation of th
 
 ## How to Play
 
-1. Clone or download the repository to your local machine.
-2. Open the `index.html` file in your web browser.
-3. Open the browser console (usually by pressing `F12` or `Ctrl+Shift+I`) to see the game output.
+1. Click one of the buttons: Rock, Paper, or Scissors to make your choice.
+2. The game will display the winner for the current round and update the round counter.
+3. After 5 rounds, the final winner will be declared.
+4. A "Play Again" button will appear, allowing you to reset the game.
 
-### Game Rules
+## Updates
 
-- You can play five rounds of Rock, Paper, Scissors.
-- Type your choice in the console when prompted: 'rock,' 'paper,' or 'scissors.'
-- The computer will randomly select its choice.
-- The game will determine the winner of each round and keep track of the score.
-- The overall winner will be declared at the end of the game.
-
-## Features
-
-- Simple and easy-to-understand code.
-- A basic HTML interface to display game instructions (future plans for GUI).
-- JavaScript functions to handle player choices and game logic.
-- Score tracking to declare the game winner.
-
-## Getting Started
-
-1. Clone the repository to your local machine:
-
-   ```
-   git clone https://github.com/yourusername/rock-paper-scissors.git
-   ```
-
-2. Open the `index.html` file in your web browser.
-3. Follow the game instructions in the browser console.
+- Added a "Play Again" button.
+- Improved game logic and round tracking.
+- Disabled button functionality after 5 rounds.
 
 ## Future Enhancements
 
 In a future version of this project, I plan to:
 
-- Create a graphical user interface (GUI) with buttons and text for a more interactive experience.
-- Allow customization of the number of rounds.
-- Add additional features and improvements for a more polished user experience.
+- Add a "Play Again" button.
 
 Stay tuned for updates!
 
